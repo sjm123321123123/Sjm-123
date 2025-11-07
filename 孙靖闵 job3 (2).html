@@ -1,0 +1,469 @@
+<!doctype html>
+<html>
+<head><title>尤克里里社招新</title>
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f8f5f0;
+            color: #333;
+            line-height: 1.8;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .music-btn {
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #f5d7b0;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: #8b5a2b;
+            font-weight: 600;
+        }
+        .music-btn:hover {
+            background-color: #e8c59c;
+        }
+        h1 {
+            text-align: center;
+            color: #8b5a2b;
+            margin-bottom: 10px;
+        }
+        .nav {
+            text-align: center;
+            margin: 30px 0;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #8b5a2b;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: #f5d7b0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        .section h2 {
+            color: #8b5a2b;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f5d7b0;
+        }
+        .back-top {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #f5d7b0;
+            color: #8b5a2b;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        .back-top:hover {
+            background-color: #e8c59c;
+        }
+        /* 图片样式 */
+        .ukulele-img {
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .ukulele-img:hover {
+            transform: scale(1.02);
+        }
+        /* 表格样式 */
+        .activity-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .activity-table th, .activity-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+        .activity-table th {
+            background-color: #f5d7b0;
+            color: #8b5a2b;
+            font-weight: 600;
+        }
+        .activity-table tr:nth-child(even) {
+            background-color: #faf6f0;
+        }
+        /* 视频样式 */
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        embed {
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        /* 表单样式 */
+        .form-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 15px;
+        }
+        .form-table td {
+            padding: 10px;
+        }
+        .form-table td:first-child {
+            width: 20%;
+            text-align: right;
+            font-weight: 600;
+            color: #8b5a2b;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #f5d7b0;
+            box-shadow: 0 0 0 3px rgba(245, 215, 176, 0.3);
+        }
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+        }
+        .btn-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn {
+            padding: 12px 30px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-submit {
+            background-color: #f5d7b0;
+            color: #8b5a2b;
+        }
+        .btn-reset {
+            background-color: #eee;
+            color: #666;
+        }
+        .btn-submit:hover {
+            background-color: #e8c59c;
+        }
+        .btn-reset:hover {
+            background-color: #ddd;
+        }
+    </style>
+        <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f0c868;
+            padding-bottom: 15px;
+        }
+        /* 核心修改：缩小图片，设置最大宽度为60%（可按需调整） */
+        .ukulele-img {
+            display: block;
+            max-width: 60%; /* 图片最大宽度为容器的60%，数值越小图片越小 */
+            height: auto; /* 保持图片宽高比，避免变形 */
+            margin: 0 auto;
+            border-radius: 6px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+        .img-caption {
+            text-align: center;
+            margin-top: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尤克里里社团 - 招新啦</title>
+
+</head>
+ <body>
+  <audio controls>
+  <source src="file:///D:/360安全浏览器下载/web文件/《青春贝斯的欢快街舞派对》完美的红烧肉.mp3" type="audio/mpeg" control="controls"  autoplay="autoplay">
+
+</audio>
+ <h1>尤克里里社团 - 2025春季招新</h1>
+
+</body>
+<body>
+      <div class="nav">
+        <a href="#intro">社团简介</a>
+        <a href="#activity">活动安排</a>
+        <a href="#show">风采展示</a>
+        <a href="#story">社员故事</a>
+        <a href="#apply">在线报名</a>
+    </div>
+
+
+
+    <div class="container">
+        <section id="club-intro" class="section">
+            <h2>社团简介</h2>
+            <p>      在校园文化的璀璨星河中，尤克里里社团如同一颗温暖明亮的星辰，自2016年成立以来，便以“以琴会友，用乐传情”为核心宗旨，为热爱音乐的学子搭建起一个零基础友好、高包容性的艺术交流平台。八年间，社团从最初仅有12名创始人的小型兴趣小组，成长为拥有注册成员200余人、年均举办活动30余场的校级“五星社团”，先后荣获“校园文化建设标杆社团”“年度最具人气文艺社团”等多项荣誉，成为校园里传播音乐魅力、营造青春氛围的重要力量。
+社团的诞生源于一群大学生对尤克里里这一乐器的共同热爱。相较于吉他的复杂指法，尤克里里仅有四根琴弦，入门门槛更低，音色清脆灵动，兼具趣味性与表现力，非常适合校园群体学习和传播。基于这一特性，社团成立之初便确立了“零门槛准入、分层级培养、全维度成长”的发展理念，无论是否有音乐基础，只要对尤克里里抱有热情，都能在这里找到属于自己的位置。为了让更多同学感受乐器魅力，社团每年新生季都会开展“尤克里里体验周”活动，免费提供乐器和基础教学，累计吸引近千名学子参与体验，其中30%以上的体验者最终成为社团核心成员。
+</p>
+            <p>         完善的组织架构是社团稳定发展的基石。社团现设有教学部、活动部、宣传部、外联部四大职能部门，各部门分工协作、紧密配合。教学部是社团的核心部门，由15名通过专业考核的骨干成员组成，其中不乏获得全国尤克里里等级考试高级证书、在省级文艺赛事中获奖的优秀学子。教学部根据成员基础差异，开设“零基础启蒙班”“进阶技巧班”“弹唱创作班”三个层级课程，采用“线上微课+线下实操+一对一辅导”的教学模式，每周固定开展2次集体教学活动，确保每位成员都能循序渐进提升技能。活动部负责策划各类特色活动，从“校园弹唱会”“乐器沙龙”到“音乐公益行”，构建起多元化的活动体系；宣传部通过公众号、视频号等平台，记录社团成长瞬间，制作的“尤克里里小课堂”系列短视频累计播放量超10万次；外联部则负责对接校外艺术机构、兄弟院校社团，为成员争取交流演出机会。
+</p>
+            <p>          丰富多样的活动是社团活力的体现。除常规教学外，社团打造了多个标志性活动IP。每年春季举办的“春日弹唱季”活动，以露天演出的形式邀请成员走上舞台，从经典民谣到流行金曲，用尤克里里的旋律装点校园春光，已成为校园春季文化节的固定环节；秋季开展的“尤克里里创意大赛”，鼓励成员进行改编、创作，涌现出《校园时光》《青春和弦》等多首原创作品，其中部分作品被收录到校园文化作品集。为承担社会责任，社团还发起“音乐暖童心”公益项目，组织成员走进周边留守儿童学校，开展尤克里里公益教学，累计服务时长超800小时，被当地教育局评为“优秀公益实践团队”。此外，社团还积极参与各类交流活动，先后与省内8所高校的同类社团开展联谊演出，选派成员参加全国大学生尤克里里邀请赛，获得“团体优秀奖”“最佳创意奖”等多项荣誉。
+社团的成长不仅体现在规模和荣誉上，更在于对成员个人成长的赋能。许多成员初入社团时性格内向、缺乏自信，通过一次次的教学练习、舞台演出，逐渐变得开朗大方。2022级成员李同学曾是一名零基础的“音乐小白”，加入社团后从启蒙班开始系统学习，如今已能独立完成创作弹唱，还成为教学部的骨干讲师，她在社团年度总结中写道：“尤克里里不仅让我学会了一门乐器，更让我找到了表达自我的方式，在这里认识的志同道合的朋友，是我大学最珍贵的收获。”这样的成长故事，在社团中每天都在发生。
+展望未来，尤克里里社团将继续坚守“传播音乐之美，凝聚青春力量”的初心，一方面深化教学体系改革，引入专业音乐人线上授课资源，开发更具针对性的课程内容；另一方面拓展活动边界，计划打造校园尤克里里文化节，推动这一乐器在校园的进一步普及。同时，社团将持续深化公益实践，让尤克里里的旋律传递更多温暖，努力成为校园文化建设的中坚力量，为学子的青春添上浓墨重彩的音乐底色。</p>
+           <a href="#" class="back-top">返回顶部</a>
+        
+        </section>
+
+        <!-- 活动安排 锚点区域 -->
+        <section id="activity-schedule" class="section">
+            <h2>活动安排</h2>
+            <section id="activity" class="section">
+            <h2>2025年春季学期活动安排</h2>
+            <table class="activity-table">
+                <tr>
+                    <th colspan="4">尤克里里社 2025 年春季学期活动安排表</th>
+                </tr>
+                <tr>
+                    <th>活动名称</th>
+                    <th>时间</th>
+                    <th>地点</th>
+                    <th>参与对象</th>
+                </tr>
+                <tr>
+                    <td>新成员见面会</td>
+                    <td>3月15日 19:00-21:00</td>
+                    <td rowspan="2">大学生活动中心302室</td>
+                    <td>全体新社员</td>
+                </tr>
+                <tr>
+                    <td>尤克里里基础教学公开课</td>
+                    <td>3月22日 19:00-21:00</td>
+                    <td>新社员及感兴趣的同学</td>
+                </tr>
+                <tr>
+                    <td>和弦进阶训练</td>
+                    <td>4月5日、12日、19日 19:00-20:30</td>
+                    <td>音乐楼501教室</td>
+                    <td>全体社员</td>
+                </tr>
+                <tr>
+                    <td>校园户外弹唱会</td>
+                    <td>4月27日 14:00-17:00</td>
+                    <td>学校樱花大道</td>
+                    <td>全体社员+校外音乐爱好者</td>
+                </tr>
+                <tr>
+                    <td>歌曲合奏编排 workshop</td>
+                    <td>5月10日、17日 19:00-21:00</td>
+                    <td>大学生社团活动中心302室</td>
+                    <td>有一定基础的社员</td>
+                </tr>
+                <tr>
+                    <td>社团内部音乐会</td>
+                    <td>6月1日 19:00-22:00</td>
+                    <td>学校大礼堂小剧场</td>
+                    <td>全体社员及邀请嘉宾</td>
+                </tr>
+                <tr>
+                    <td>春季学期总结暨表彰大会</td>
+                    <td>6月20日 19:00-20:30</td>
+                    <td>音乐楼201教室</td>
+                    <td>全体社员</td>
+                </tr>
+            </table>
+           <a href="跳转.html" target="_blank">
+            <img src="D:/360安全浏览器下载/web文件/图一.png" alt="尤克里里社团日常演奏照片" class="ukulele-img">
+            <a href="#" class="back-top">返回顶部</a>
+       
+        <!-- 风采展示 锚点区域 -->
+        <section id="style-show" class="section">
+            <h2>风采展示</h2>
+            <p>以下是社团近期活动的精彩瞬间：</p> 
+            <p>
+            </p>
+            <p>• 汉服文化节：成员身着传统汉服在校园内进行文化展示，吸引大量师生驻足拍照，获得广泛好评。</p>
+    
+            <p>• 公益支教活动：组织志愿者前往乡村小学，开展传统文化支教，为孩子们带去不一样的课堂体验。</p>
+            <p>• 非遗成果展：展示社团成员学习非遗技艺的成果，包括剪纸作品、传统手工艺品等，获得校级奖项。</p>
+            <p>• 跨校交流活动：与兄弟院校社团联合举办文化论坛，促进了校际文化交流与合作。</p>
+          
+            <h3>宣传视频</h3>
+             <embed src="D:\360安全浏览器下载\web文件\视频.mp4"
+       width="480"
+       height="270"
+       loop="true">
+             </embed>
+              <p>
+               <a href="#" class="back-top">返回顶部</a>
+               </p>
+        </section>
+
+        <!-- 社员故事 锚点区域 -->
+        <section id="member-stories" class="section">
+            <h2>社员故事</h2>
+            <p><strong>李同学（大三，文化研究部部长）：</strong></p>
+            <p>加入社团三年，从一名普通成员成长为部门负责人，这里不仅让我深入了解了中华传统文化的魅力，更锻炼了我的组织能力和沟通能力。印象最深刻的是去年的公益支教活动，当看到孩子们渴望知识的眼神，我更加坚定了传承传统文化的决心。</p>
+            <p><strong>张同学（大二，新媒体运营部成员）：</strong></p>
+            <p>作为一名计算机专业的学生，我没想到自己会对传统文化产生这么浓厚的兴趣。在社团里，我用专业知识运营公众号、制作宣传视频，让更多人了解传统文化的同时，也提升了自己的专业技能，这是一段非常有意义的经历。</p>
+            <p><strong>王同学（大一，新成员）：</strong></p>
+            <p>刚入学就加入了这个温暖的大家庭，学长学姐们都很热心，活动也非常丰富。通过参与汉服体验活动，我第一次感受到了传统服饰的美感，现在已经成为传统文化的忠实爱好者，希望未来能为社团发展贡献自己的力量。</p>
+                  <a href="#" class="back-top">返回顶部</a>
+        </section>
+
+        <!-- 6. 在线报名 -->
+        <section id="apply" class="section">
+            <h2>尤克里里社在线报名表</h2>
+            <form action="" method="post">
+                <table class="form-table">
+                    <tr>
+                        <td>姓名：</td>
+                        <td><input type="text" name="name" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td>性别：</td>
+                        <td>
+                            <input type="radio" name="gender" value="男" id="male" required>
+                            <label for="male">男</label>
+                            <input type="radio" name="gender" value="女" id="female" style="margin-left: 20px;">
+                            <label for="female">女</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>出生日期：</td>
+                        <td>
+                            <input type="text" name="birthYear" placeholder="年" class="form-control" style="width: 30%; display: inline-block;" required>
+                            <input type="text" name="birthMonth" placeholder="月" class="form-control" style="width: 30%; display: inline-block; margin: 0 5%;" required>
+                            <input type="text" name="birthDay" placeholder="日" class="form-control" style="width: 30%; display: inline-block;" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机号码：</td>
+                        <td><input type="text" name="phone" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td>电子邮箱：</td>
+                        <td><input type="text" name="email" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td>是否有尤克里里基础：</td>
+                        <td>
+                            <input type="radio" name="base" value="有" id="hasBase" required>
+                            <label for="hasBase">有</label>
+                            <input type="radio" name="base" value="无" id="noBase" style="margin-left: 20px;">
+                            <label for="noBase">无</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>兴趣方向：</td>
+                        <td>
+                            <input type="checkbox" name="interest" value="基础弹唱" id="sing">
+                            <label for="sing">基础弹唱</label>
+                            <input type="checkbox" name="interest" value="进阶合奏" id="ensemble" style="margin-left: 20px;">
+                            <label for="ensemble">进阶合奏</label>
+                            <input type="checkbox" name="interest" value="歌曲改编" id="adapt" style="margin-left: 20px;">
+                            <label for="adapt">歌曲改编</label>
+                            <input type="checkbox" name="interest" value="舞台表演" id="perform" style="margin-left: 20px;">
+                            <label for="perform">舞台表演</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>年级：</td>
+                        <td>
+                            <select name="grade" class="form-control" required>
+                                <option value="">请选择年级</option>
+                                <option value="大一">大一</option>
+                                <option value="大二">大二</option>
+                                <option value="大三">大三</option>
+                                <option value="大四">大四</option>
+                                <option value="研究生">研究生</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>自我介绍：</td>
+                        <td>
+                            <textarea name="intro" class="form-control" placeholder="请简单介绍自己、以及加入尤克里里社的理由……" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>是否服从活动安排：</td>
+                        <td>
+                            <input type="radio" name="obey" value="是" id="yes" required>
+                            <label for="yes">是</label>
+                            <input type="radio" name="obey" value="否" id="no" style="margin-left: 20px;">
+                            <label for="no">否</label>
+                        </td>
+                    </tr>
+                </table>
+                <div class="btn-group">
+                    <input type="submit" value="提交报名" class="btn btn-submit">
+                    <input type="reset" value="重置表单" class="btn btn-reset">
+                </div>
+            </form>
+            <a href="#" class="back-top">返回顶部</a>
+        </section>
+    </div>
+
+    </div>
+</body>
+</html>
+ </body>
+</html>
